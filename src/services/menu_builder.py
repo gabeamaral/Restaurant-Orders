@@ -26,4 +26,17 @@ class MenuBuilder:
 
     # Req 4 oi
     def get_main_menu(self, restriction=None) -> List[Dict]:
-        pass
+        new_menu = []
+
+        for meal in list(self.menu_data.dishes):
+            if restriction is None or restriction not in list(
+                meal.get_restrictions()
+            ):
+                creating_menu = {
+                        'dish_name': meal.name,
+                        'ingredients': meal.get_ingredients(),
+                        'price': meal.price,
+                        'restrictions': meal.get_restrictions(),
+                    }
+                new_menu.append(creating_menu)
+        return new_menu
