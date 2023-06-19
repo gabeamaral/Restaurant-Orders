@@ -24,6 +24,6 @@ class MenuBuilder:
 
         self.inventory.consume_recipe(curr_dish.recipe)
 
-    # Req 4
+    # Req 4 oi
     def get_main_menu(self, restriction=None) -> List[Dict]:
         pass
