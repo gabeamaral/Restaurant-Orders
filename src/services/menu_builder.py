@@ -34,10 +34,9 @@ class MenuBuilder:
             ):
                 creating_menu = {
                         'dish_name': meal.name,
-                        'ingredients': meal.get_ingredients(),
+                        'ingredients': list(meal.get_ingredients()),
                         'price': meal.price,
-                        'restrictions': meal.get_restrictions(),
+                        'restrictions': list(meal.get_restrictions()),
                     }
                 new_menu.append(creating_menu)
         return new_menu
-    # oi
